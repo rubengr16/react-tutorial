@@ -1,26 +1,37 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "target": "ES6",
+      "strict": true,
+      "sourceMap": true,
+      "allowJs": false,
+      "checkJs": false,
+      "lib": ["DOM", "ESNext"],
+      "downlevelIteration": true,
+      "importHelpers": true,
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "experimentalDecorators": true,
+      "noUnusedParameters": true,
+      "noUnusedLocals": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noFallthroughCasesInSwitch": true,
+      "strictNullChecks": false,
+      "suppressImplicitAnyIndexErrors": true,
+      "skipLibCheck": true,
+      "types": ["jest"],
+      "baseUrl": "src",
+      "paths": {
+          "@app/*": ["./*"],
+          "@tests/*": ["../tests/*"]
+      },
+      "esModuleInterop": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx"
+  }
 }

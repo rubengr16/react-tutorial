@@ -1,0 +1,25 @@
+{
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "editor.formatOnSave": true,
+
+    "editor.codeActionsOnSave": {
+
+        "source.fixAll": true
+
+    },
+
+    "[jsonc]": {
+
+        "editor.quickSuggestions": {
+
+            "strings": true
+
+        },
+
+        "editor.suggest.insertMode": "replace"
+
+    }
+
+}

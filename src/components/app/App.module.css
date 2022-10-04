@@ -1,0 +1,13 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.title {
+	color: rgb(72, 7, 133);
+}
+
+.postsWrapper {
+	width: 200px;
+}
