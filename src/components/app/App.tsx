@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Post, {PostProps} from '../post/Post';
 import classNames from './App.module.css'
 
@@ -31,11 +31,19 @@ const posts: PostProps[] = [
 ]
 
 const App: React.FC = () => {
+	const [showPublished, setShowPublished] = useState(false);
+	const toggleShowAll = () => {
+		setShowPublished(prevShowPublished => !prevShowPublished);
+	}
+
 	return (
 		<div className={classNames.wrapper}>
 			<h1 className={classNames.title}>Hello typescript!</h1>
+			<button onClick={toggleShowAll}>
+				{showPublished ? "Show All" : "Show Published Only"}
+			</button>
 			<div className={classNames.postsWrapper}>
-				{posts.map((post) => (<Post key={post.title} {...post}/>))}
+				{posts.filter(post => showPublished ? post.isPublished : true).map((post) => (<Post key={post.title} {...post}/>))}
 			</div>
 		</div>
 	)
