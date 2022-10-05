@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Post, {PostProps} from '../post/Post';
 import classNames from './App.module.css'
 
@@ -31,10 +31,13 @@ const posts: PostProps[] = [
 ]
 
 const App: React.FC = () => {
-	const [showPublished, setShowPublished] = useState(false);
+	const [showPublished, setShowPublished] = useState<boolean>(false);
 	const toggleShowAll = () => {
 		setShowPublished(prevShowPublished => !prevShowPublished);
 	}
+	useEffect(() => {
+		document.title = showPublished ? "Published posts" : "All posts";
+	}, [showPublished])
 
 	return (
 		<div className={classNames.wrapper}>
