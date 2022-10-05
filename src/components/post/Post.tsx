@@ -15,7 +15,7 @@ const Post: React.FC<PostProps> = ({
 	isPublished,
 }) => {
 	return (
-		<div key={title}>
+		<div>
 			<p className={classNames.title}>title: {title}</p>
 			<p className={classNames.description}>description: {description}</p>
 			<p className={classNames.author}>author: {author}</p>
